@@ -1,0 +1,106 @@
+### -------------------------------------------- ###
+### Project Ignores                              ###
+### -------------------------------------------- ###
+
+## Crashlytics
+crashlytics-build.properties
+com_crashlytics_export_strings.xml
+
+## Build Files/Folders
+[Bb]in/
+[Bb]uild/
+[Gg]en/
+[Oo]bj/
+[Oo]ut/
+[Pp]roduction/
+[Tt]arget/
+
+*.ap_
+*.apk
+*.class
+*.ear
+*.war
+manifest-merger-*-report.txt
+
+
+
+### -------------------------------------------- ###
+### IDEs & Editors Ignores                       ###
+### -------------------------------------------- ###
+
+## JetBeans IDEs
+.idea/
+.gradle/
+
+*.iml
+*.ipr
+*.iws
+*.swp
+local.properties
+
+## Eclipse
+.settings/
+
+## Sublime Text
+/*.sublime*
+
+
+### -------------------------------------------- ###
+### General Ignores                              ###
+### -------------------------------------------- ###
+
+*~
+
+
+
+### -------------------------------------------- ###
+### Linux Ignores                                ###
+### -------------------------------------------- ###
+
+## KDE directory preferences
+.directory
+
+
+
+### -------------------------------------------- ###
+### OSX Ignores                                  ###
+### -------------------------------------------- ###
+
+.DS_Store
+.AppleDouble
+.LSOverride
+.localized
+
+## Icon must end with two \r
+Icon
+
+
+## Thumbnails
+._*
+
+## Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+## Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+
+### -------------------------------------------- ###
+### Windows Ignores                              ###
+### -------------------------------------------- ###
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Folder config file
+Desktop.ini
+
+## Recycle Bin used on file shares
+$RECYCLE.BIN/

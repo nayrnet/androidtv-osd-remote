@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="primary">#FF73b4f1</color>
+  <color name="primaryDark">#FF4c78a1</color>
+  <color name="accent">#FFff7400</color>
+
+  <color name="textPrimary">#FF000000</color>
+  <color name="textSecondary">#FF222222</color>
+
+
+  <color name="actionItem_background_notSelected">#FF888888</color>
+  <color name="actionItem_background_selected">@color/accent</color>
+</resources>

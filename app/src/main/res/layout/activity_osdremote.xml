@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".OSDRemote"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+    android:weightSum="1">
+
+
+  <include layout="@layout/include_header" />
+
+
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_poweroff" android:text="POWER OFF"
+      android:layout_height="wrap_content"
+      android:foregroundGravity="bottom"
+      android:gravity="center_horizontal|bottom"
+      android:textAlignment="center" />
+
+  <Space
+      style="@style/AppTheme.Space"
+      android:layout_width="905dp"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal" />
+
+  <Space style="@style/AppTheme.Space" />
+
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps3" android:text="PlayStation 3"
+      android:layout_width="match_parent"
+      android:gravity="center_horizontal" />
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps4" android:text="PlayStation 4"
+      android:layout_width="match_parent"
+      android:gravity="center_horizontal" />
+
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ipcameras" android:text="Security Cameras"
+      android:gravity="center_horizontal" />
+
+  <Space style="@style/AppTheme.Space" />
+
+  <TextView
+      style="@style/AppTheme.ActionItem"
+      android:id="@+id/main_actionItem_mute"
+      android:text="MUTE"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal" />
+
+  <TextView
+      style="@style/AppTheme.ActionItem"
+      android:id="@+id/main_actionItem_dim"
+      android:text="CINEMA LIGHTING"
+      android:layout_height="wrap_content"
+      android:foregroundGravity="bottom"
+      android:gravity="center_horizontal|bottom"
+      android:textAlignment="center"
+      android:layout_width="match_parent" />
+
+  <TextView
+      style="@style/AppTheme.ActionItem"
+      android:id="@+id/main_actionItem_lightsout"
+      android:text="LIGHTS OUT"
+      android:layout_height="wrap_content"
+      android:foregroundGravity="bottom"
+      android:textAlignment="gravity"
+      android:layout_width="match_parent"
+      android:gravity="center_horizontal" />
+
+  <Space
+      style="@style/AppTheme.Space"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp" />
+
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_cancel" android:text="EXIT"
+      android:gravity="center_horizontal" />
+
+
+</LinearLayout>
