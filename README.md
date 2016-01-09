@@ -25,9 +25,9 @@ Nexus Player.
 
 ## Screenshots
 
-![Screenshot](https://raw.githubusercontent.com/nayrnet/androidtv-osd-remote/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/nayrnet/androidtv-osd-remote/master/screenshot.png)
 
 ## Credits:
- Forked from: https://github.com/bsara/reboot-android-tv
- By: Ryan Hunt <admin@nayr.net>
- Original Copyright maintained.
+ - Forked from: https://github.com/bsara/reboot-android-tv
+ - By: Ryan Hunt <admin@nayr.net>
+ - Original Copyright maintained.
