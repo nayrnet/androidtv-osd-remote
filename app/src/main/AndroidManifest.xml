@@ -18,12 +18,22 @@
     <activity
       android:name="io.github.nayrnet.androidtv.osd.remote.OSDRemote"
       android:label="@string/app_name"
-      android:theme="@android:style/Theme.Material.Light.DialogWhenLarge.NoActionBar">
+      android:theme="@android:style/Theme.Material.DialogWhenLarge.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity-alias
+        android:name=".OSDRemote"
+        android:targetActivity="io.github.nayrnet.androidtv.osd.remote.OSDRemote"
+        android:banner="@drawable/banner"
+        android:enabled="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
 
   </application>
 
