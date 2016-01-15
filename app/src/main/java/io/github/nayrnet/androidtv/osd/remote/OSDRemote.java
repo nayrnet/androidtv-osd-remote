@@ -23,31 +23,31 @@ public class OSDRemote extends Activity {
   public void execAction(View selectedView) {
     switch (selectedView.getId()) {
       case R.id.main_actionItem_ipcameras:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=127&switchcmd=On");
+        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=127&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_ps3:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=101&switchcmd=On");
+        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=101&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_ps4:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=102&switchcmd=On");
+        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=102&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_poweroff:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=104&switchcmd=Off");
+        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=104&switchcmd=Off");
         this.finish();
         break;
       case R.id.main_actionItem_mute:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
+        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
         this.finish();
         break;
       case R.id.main_actionItem_dim:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=5&switchcmd=On");
+        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=5&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_lightsout:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=6&switchcmd=Off");
+        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=6&switchcmd=Off");
         this.finish();
         break;
       default:
