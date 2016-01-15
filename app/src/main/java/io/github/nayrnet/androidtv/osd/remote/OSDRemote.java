@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.os.AsyncTask;
+import android.util.Base64;
 import java.net.HttpURLConnection;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
@@ -23,31 +24,31 @@ public class OSDRemote extends Activity {
   public void execAction(View selectedView) {
     switch (selectedView.getId()) {
       case R.id.main_actionItem_ipcameras:
-        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=127&switchcmd=On");
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=127&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_ps3:
-        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=101&switchcmd=On");
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=101&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_ps4:
-        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=102&switchcmd=On");
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=102&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_poweroff:
-        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=104&switchcmd=Off");
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=104&switchcmd=Off");
         this.finish();
         break;
       case R.id.main_actionItem_mute:
-        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
         this.finish();
         break;
       case R.id.main_actionItem_dim:
-        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=5&switchcmd=On");
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=5&switchcmd=On");
         this.finish();
         break;
       case R.id.main_actionItem_lightsout:
-        new AsyncHttpTask().execute("http://dev:dev@192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=6&switchcmd=Off");
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=6&switchcmd=Off");
         this.finish();
         break;
       default:
@@ -57,6 +58,8 @@ public class OSDRemote extends Activity {
   }
 
   public class AsyncHttpTask extends AsyncTask<String, Void, Integer> {
+    // Auth-Basic Login Credentials to Domoticz
+    final String basicAuth = "Basic " + Base64.encodeToString("dev:dev".getBytes(), Base64.NO_WRAP);
 
     @Override
     protected Integer doInBackground(String... params) {
@@ -70,6 +73,7 @@ public class OSDRemote extends Activity {
         URL url = new URL(params[0]);
 
         urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setRequestProperty ("Authorization", basicAuth);
 
                 /* for Get request */
         urlConnection.setRequestMethod("GET");
