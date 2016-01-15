@@ -26,44 +26,42 @@
 
   <Space style="@style/AppTheme.Space" />
 
-  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps3" android:text="PlayStation 3"
-      android:layout_width="match_parent"
-      android:gravity="center_horizontal" />
-  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps4" android:text="PlayStation 4"
-      android:layout_width="match_parent"
-      android:gravity="center_horizontal" />
-
-  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ipcameras" android:text="Security Cameras"
-      android:gravity="center_horizontal" />
-
-  <Space style="@style/AppTheme.Space" />
-
   <TextView
       style="@style/AppTheme.ActionItem"
-      android:id="@+id/main_actionItem_mute"
-      android:text="MUTE"
+      android:id="@+id/main_actionItem_bedroom"
+      android:text="BEDROOM LIGHT"
+      android:gravity="center_horizontal"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:gravity="center_horizontal" />
+      android:layout_height="wrap_content" />
 
-  <TextView
-      style="@style/AppTheme.ActionItem"
-      android:id="@+id/main_actionItem_dim"
-      android:text="CINEMA LIGHTING"
-      android:layout_height="wrap_content"
-      android:foregroundGravity="bottom"
-      android:gravity="center_horizontal|bottom"
-      android:textAlignment="center"
-      android:layout_width="match_parent" />
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_dim" android:text="UPSTAIRS LIGHTS"
+      android:gravity="center_horizontal" />
 
   <TextView
       style="@style/AppTheme.ActionItem"
       android:id="@+id/main_actionItem_lightsout"
-      android:text="LIGHTS OUT"
+      android:text="ALL LIGHTS OUT"
       android:layout_height="wrap_content"
       android:foregroundGravity="bottom"
       android:textAlignment="gravity"
       android:layout_width="match_parent"
+      android:gravity="center_horizontal" />
+
+  <Space style="@style/AppTheme.Space" />
+
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_charlie" android:text="Charlies TV"
+      android:layout_width="match_parent"
+      android:gravity="center_horizontal" />
+  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_livingpower" android:text="Living Room TV"
+      android:layout_width="match_parent"
+      android:gravity="center_horizontal" />
+
+  <TextView
+      style="@style/AppTheme.ActionItem"
+      android:id="@+id/main_actionItem_mute"
+      android:text="Mute Living Room"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
       android:gravity="center_horizontal" />
 
   <Space

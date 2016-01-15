@@ -76,15 +76,6 @@
     <item name="android:onClick">execAction</item>
   </style>
 
-
-  <style name="AppTheme.License" parent="AppTheme.About">
-    <item name="android:textAppearance">@style/AppTheme.License.TextAppearance</item>
-    <item name="android:textAppearanceLarge">@style/AppTheme.License.TextAppearance.Large</item>
-    <item name="android:textAppearanceMedium">@style/AppTheme.License.TextAppearance.Medium</item>
-    <item name="android:textAppearanceSmall">@style/AppTheme.License.TextAppearance.Small</item>
-  </style>
-
-
   <style name="AppTheme.License.TextAppearance.Small" parent="AppTheme.About.TextAppearance.Small" />
   <style name="AppTheme.License.TextAppearance" parent="AppTheme.About.TextAppearance" />
   <style name="AppTheme.License.TextAppearance.Medium" parent="AppTheme.About.TextAppearance.Medium" />
