@@ -73,7 +73,8 @@ public class OSDRemote extends Activity {
         URL url = new URL(params[0]);
 
         urlConnection = (HttpURLConnection) url.openConnection();
-
+        urlConnection.setRequestProperty ("Authorization", basicAuth);
+        
                 /* for Get request */
         urlConnection.setRequestMethod("GET");
 
