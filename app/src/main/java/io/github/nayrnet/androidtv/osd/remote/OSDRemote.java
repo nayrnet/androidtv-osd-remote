@@ -41,8 +41,7 @@ public class OSDRemote extends Activity {
         break;
       case R.id.main_actionItem_poweroff:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Off");
-        goBack.postDelayed(dialog, 3000
-        );
+        goBack.postDelayed(dialog, 3000);
         break;
       case R.id.main_actionItem_mute:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
