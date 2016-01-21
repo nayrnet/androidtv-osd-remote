@@ -10,7 +10,9 @@ import java.net.HttpURLConnection;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.net.URL;
-
+import android.content.DialogInterface;
+import android.app.AlertDialog;
+import android.os.Handler;
 
 public class OSDRemote extends Activity {
 
@@ -22,22 +24,25 @@ public class OSDRemote extends Activity {
 
 
   public void execAction(View selectedView) {
+    Handler goBack = new Handler();
+
     switch (selectedView.getId()) {
       case R.id.main_actionItem_ipcameras:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=127&switchcmd=On");
-        this.finish();
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=40");
+        goBack.postDelayed(dialog, 3000);
         break;
       case R.id.main_actionItem_ps3:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=101&switchcmd=On");
-        this.finish();
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=20");
+        goBack.postDelayed(dialog, 3000);
         break;
       case R.id.main_actionItem_ps4:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=102&switchcmd=On");
-        this.finish();
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=30");
+        goBack.postDelayed(dialog, 3000);
         break;
       case R.id.main_actionItem_poweroff:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=104&switchcmd=Off");
-        this.finish();
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Off");
+        goBack.postDelayed(dialog, 3000
+        );
         break;
       case R.id.main_actionItem_mute:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
@@ -99,4 +104,22 @@ public class OSDRemote extends Activity {
     }
 
   }
+
+  private Runnable dialog = new Runnable() {
+    @Override
+    public void run() {
+      new AlertDialog.Builder(OSDRemote.this)
+          .setTitle("Please Note")
+          .setMessage("You can return to the Nexus Player after changing inputs/powering off by simply pressing ENTER/OK on the Nexus remote.\n\nIf you can see this message simply press continue.")
+          .setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+              new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=10");
+              OSDRemote.this.finish();
+            }
+          })
+          .create()
+          .show();
+    }
+  };
 }
