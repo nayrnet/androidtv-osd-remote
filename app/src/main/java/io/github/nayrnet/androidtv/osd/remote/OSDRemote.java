@@ -29,19 +29,19 @@ public class OSDRemote extends Activity {
     switch (selectedView.getId()) {
       case R.id.main_actionItem_ipcameras:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=40");
-        goBack.postDelayed(dialog, 3000);
+        this.finish();
         break;
       case R.id.main_actionItem_ps3:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=20");
-        goBack.postDelayed(dialog, 3000);
+        this.finish();
         break;
       case R.id.main_actionItem_ps4:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=30");
-        goBack.postDelayed(dialog, 3000);
+        this.finish();
         break;
       case R.id.main_actionItem_poweroff:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Off");
-        goBack.postDelayed(dialog, 3000);
+        this.finish();
         break;
       case R.id.main_actionItem_mute:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
