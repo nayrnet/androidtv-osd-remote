@@ -47,12 +47,24 @@ public class OSDRemote extends Activity {
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=105&switchcmd=Toggle");
         this.finish();
         break;
-      case R.id.main_actionItem_dim:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=5&switchcmd=On");
+      case R.id.main_actionItem_alc:
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=168&switchcmd=Set%20Level&level=20");
         this.finish();
         break;
-      case R.id.main_actionItem_lightsout:
-        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchscene&idx=6&switchcmd=Off");
+      case R.id.main_actionItem_extended:
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=168&switchcmd=Set%20Level&level=70");
+        this.finish();
+        break;
+      case R.id.main_actionItem_prologic:
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=168&switchcmd=Set%20Level&level=50");
+        this.finish();
+        break;
+      case R.id.main_actionItem_stereo:
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=168&switchcmd=Set%20Level&level=40");
+        this.finish();
+        break;
+      case R.id.main_actionItem_surround:
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=168&switchcmd=Set%20Level&level=10");
         this.finish();
         break;
       default:

@@ -3,14 +3,21 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   tools:context=".OSDRemote"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
   android:orientation="vertical"
     android:weightSum="1">
 
 
   <include layout="@layout/include_header" />
 
+
+  <TextClock
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/textClock"
+      android:layout_gravity="right"
+      android:layout_margin="10px" />
 
   <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_poweroff" android:text="POWER OFF"
       android:layout_height="wrap_content"
@@ -24,8 +31,6 @@
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal" />
 
-  <Space style="@style/AppTheme.Space" />
-
   <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps3" android:text="PlayStation 3"
       android:layout_width="match_parent"
       android:gravity="center_horizontal" />
@@ -36,35 +41,106 @@
   <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ipcameras" android:text="Security Cameras"
       android:gravity="center_horizontal" />
 
-  <Space style="@style/AppTheme.Space" />
-
-  <TextView
-      style="@style/AppTheme.ActionItem"
-      android:id="@+id/main_actionItem_mute"
-      android:text="MUTE"
+  <TableLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:gravity="center_horizontal" />
+      android:baselineAligned="false"
+      android:stretchColumns="*"
+      android:orientation="vertical"
+      android:layout_gravity="center">
 
-  <TextView
-      style="@style/AppTheme.ActionItem"
-      android:id="@+id/main_actionItem_dim"
-      android:text="CINEMA LIGHTING"
-      android:layout_height="wrap_content"
-      android:foregroundGravity="bottom"
-      android:gravity="center_horizontal|bottom"
-      android:textAlignment="center"
-      android:layout_width="match_parent" />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-  <TextView
-      style="@style/AppTheme.ActionItem"
-      android:id="@+id/main_actionItem_lightsout"
-      android:text="LIGHTS OUT"
-      android:layout_height="wrap_content"
-      android:foregroundGravity="bottom"
-      android:textAlignment="gravity"
-      android:layout_width="match_parent"
-      android:gravity="center_horizontal" />
+    </TableRow>
+
+    <TableRow android:layout_width="fill_parent"
+        android:layout_height="fill_parent"><![CDATA[
+        android:id="@+id/tableRow1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+    ]]>
+
+      <TextView
+          style="@style/AppTheme.ActionItemSmall"
+          android:id="@+id/main_actionItem_mute"
+          android:text="MUTE"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:gravity="center_horizontal"
+          android:layout_gravity="top"
+          android:layout_column="0" />
+
+      <TextView
+          style="@style/AppTheme.ActionItemSmall"
+          android:id="@+id/main_actionItem_stereo"
+          android:text="Stereo"
+          android:layout_height="wrap_content"
+          android:foregroundGravity="bottom"
+          android:textAlignment="gravity"
+          android:layout_width="wrap_content"
+          android:gravity="center_horizontal"
+          android:layout_column="1" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+      <TextView
+          style="@style/AppTheme.ActionItemSmall"
+          android:id="@+id/main_actionItem_surround"
+          android:text="Surround"
+          android:layout_height="wrap_content"
+          android:foregroundGravity="bottom"
+          android:textAlignment="gravity"
+          android:layout_width="match_parent"
+          android:gravity="center_horizontal" />
+
+      <TextView
+          style="@style/AppTheme.ActionItemSmall"
+          android:id="@+id/main_actionItem_prologic"
+          android:text="ProLogic"
+          android:layout_height="wrap_content"
+          android:foregroundGravity="bottom"
+          android:layout_width="match_parent"
+          android:gravity="center_horizontal"
+          android:layout_column="1"
+          android:textAlignment="inherit" />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+      <TextView
+          style="@style/AppTheme.ActionItemSmall"
+          android:id="@+id/main_actionItem_alc"
+          android:text="ALC"
+          android:layout_height="wrap_content"
+          android:foregroundGravity="bottom"
+          android:gravity="center_horizontal|bottom"
+          android:textAlignment="center"
+          android:layout_width="fill_parent"
+          android:layout_gravity="top"
+          android:layout_column="0" />
+
+      <TextView
+          style="@style/AppTheme.ActionItemSmall"
+          android:id="@+id/main_actionItem_extended"
+          android:text="Extended"
+          android:layout_height="wrap_content"
+          android:foregroundGravity="bottom"
+          android:layout_width="match_parent"
+          android:gravity="center_horizontal"
+          android:layout_column="1"
+          android:textAlignment="inherit" />
+
+    </TableRow>
+  </TableLayout>
 
   <Space
       style="@style/AppTheme.Space"
