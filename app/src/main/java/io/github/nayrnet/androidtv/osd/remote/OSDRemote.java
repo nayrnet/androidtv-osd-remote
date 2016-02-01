@@ -27,6 +27,10 @@ public class OSDRemote extends Activity {
     Handler goBack = new Handler();
 
     switch (selectedView.getId()) {
+      case R.id.main_actionItem_fm:
+        new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=50");
+        this.finish();
+        break;
       case R.id.main_actionItem_ipcameras:
         new AsyncHttpTask().execute("http://192.168.254.33:8080/json.htm?type=command&param=switchlight&idx=145&switchcmd=Set%20Level&level=40");
         this.finish();

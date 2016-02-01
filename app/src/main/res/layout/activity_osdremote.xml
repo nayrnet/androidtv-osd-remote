@@ -4,25 +4,18 @@
   xmlns:tools="http://schemas.android.com/tools"
   tools:context=".OSDRemote"
   android:layout_width="fill_parent"
-  android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
   android:orientation="vertical"
     android:weightSum="1">
 
 
-  <include layout="@layout/include_header" />
+    <include layout="@layout/include_header" />
 
-
-  <TextClock
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/textClock"
-      android:layout_gravity="right"
-      android:layout_margin="10px" />
 
   <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_poweroff" android:text="POWER OFF"
       android:layout_height="wrap_content"
       android:foregroundGravity="bottom"
-      android:gravity="center_horizontal|bottom"
+      android:gravity="center_vertical|center_horizontal"
       android:textAlignment="center" />
 
   <Space
@@ -30,16 +23,6 @@
       android:layout_width="905dp"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal" />
-
-  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps3" android:text="PlayStation 3"
-      android:layout_width="match_parent"
-      android:gravity="center_horizontal" />
-  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps4" android:text="PlayStation 4"
-      android:layout_width="match_parent"
-      android:gravity="center_horizontal" />
-
-  <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ipcameras" android:text="Security Cameras"
-      android:gravity="center_horizontal" />
 
   <TableLayout
       android:layout_width="match_parent"
@@ -53,6 +36,54 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+      <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps3" android:text="PS3"
+          android:layout_width="match_parent"
+          android:gravity="center_horizontal"
+          android:layout_column="0" />
+
+      <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ps4" android:text="PS4"
+          android:layout_width="match_parent"
+          android:gravity="center_horizontal"
+          android:layout_column="1" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_ipcameras" android:text="CAMS"
+          android:gravity="center_horizontal"
+          android:layout_column="0" />
+
+      <TextView
+          style="@style/AppTheme.ActionItem"
+          android:id="@+id/main_actionItem_fm"
+          android:text="FM"
+          android:gravity="center_horizontal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_column="1"
+          android:textAlignment="center" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <Space
+          android:layout_width="20px"
+          android:layout_height="20px"
+          android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <Space
+          android:layout_width="20px"
+          android:layout_height="20px"
+          android:layout_column="0" />
     </TableRow>
 
     <TableRow android:layout_width="fill_parent"
@@ -131,7 +162,7 @@
       <TextView
           style="@style/AppTheme.ActionItemSmall"
           android:id="@+id/main_actionItem_extended"
-          android:text="Extended"
+          android:text="Extend"
           android:layout_height="wrap_content"
           android:foregroundGravity="bottom"
           android:layout_width="match_parent"
@@ -140,16 +171,56 @@
           android:textAlignment="inherit" />
 
     </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <Space
+          android:layout_width="20px"
+          android:layout_height="20px"
+          android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <Space
+          android:layout_width="20px"
+          android:layout_height="20px"
+          android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <TextView
+          style="@style/AppTheme.ActionItem"
+          android:id="@+id/main_actionItem_outside"
+          android:text="OUTSIDE"
+          android:layout_column="0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical|center_horizontal"
+          android:textAlignment="center" />
+
+      <TextView
+          style="@style/AppTheme.ActionItem"
+          android:id="@+id/main_actionItem_garage"
+          android:text="GARAGE"
+          android:gravity="center_horizontal"
+          android:layout_column="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textAlignment="center" />
+    </TableRow>
   </TableLayout>
 
-  <Space
-      style="@style/AppTheme.Space"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_margin="10dp" />
-
   <TextView style="@style/AppTheme.ActionItem" android:id="@+id/main_actionItem_cancel" android:text="EXIT"
-      android:gravity="center_horizontal" />
+      android:gravity="center_vertical|center_horizontal"
+      android:textAlignment="center" />
 
 
 </LinearLayout>

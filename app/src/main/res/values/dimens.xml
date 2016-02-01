@@ -3,5 +3,5 @@
   <dimen name="actionItem_bkg_radius">5dp</dimen>
 
   <dimen name="activity_license_paragraphMargin">10dp</dimen>
-  <dimen name="activity_margin">16dp</dimen>
+  <dimen name="activity_margin">0dp</dimen>
 </resources>

@@ -31,4 +31,15 @@
     android:text="TV"
       android:gravity="center_horizontal"
       android:textAlignment="gravity" />
+
+  <TextClock
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="left|top"
+      android:id="@+id/textClock"
+      android:layout_alignParentRight="true"
+      android:textAlignment="gravity"
+      android:gravity="right"
+      android:layout_margin="10dp" />
+
 </LinearLayout>

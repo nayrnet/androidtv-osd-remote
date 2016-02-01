@@ -88,9 +88,9 @@
     <item name="android:layout_marginRight">10dp</item>
     <item name="android:paddingTop">0dp</item>
     <item name="android:paddingBottom">0dp</item>
-    <item name="android:paddingLeft">5dp</item>
+    <item name="android:paddingLeft">0dp</item>
     <item name="android:paddingRight">0dp</item>
-    <item name="android:elevation">2dp</item>
+    <item name="android:elevation">0dp</item>
     <item name="android:clickable">true</item>
     <item name="android:longClickable">false</item>
     <item name="android:focusable">true</item>
